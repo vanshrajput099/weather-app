@@ -5,12 +5,9 @@ import {useDispatch, useSelector} from "react-redux"
 
 const SearchBox = () => {
     const dispath = useDispatch();
-
     const [country , changeCountry] = useState("")
     const [city , changeCity] = useState("")
     const [fontsmall , changefontSmall] = useState("weather-app-title")
-    console.log(fontsmall)
-
   return (
     <div className="search-box">
         <h1 className={fontsmall} >Weather App</h1>

@@ -44,7 +44,7 @@ const LeftResult = (props) => {
     const arr = []
     const arr2 = []
     const dataArray = props.dataArr;
-    let img = sunny;
+    let [img,changeimg] = useState(rain);
 
     //Graph Data
     for(let i=0;i<dataArray.days[0].hours.length;i++){
@@ -61,6 +61,9 @@ const LeftResult = (props) => {
 
             case 'snow-showers-day':
                 img = snow_rain
+                if(a.bgTitle==='nightBg'){
+                    img = snow_rain   
+                }
                 break;
 
             case 'snow-showers-night':
@@ -73,6 +76,9 @@ const LeftResult = (props) => {
 
             case 'thunder-showers-day':
                 img = stormy
+                if(a.bgTitle==='nightBg'){
+                    img = storm
+                }
                 break;
 
             case 'thunder-showers-night':
@@ -93,6 +99,9 @@ const LeftResult = (props) => {
 
             case 'partly-cloudy-day':
                 img = clouds
+                if(a.bgTitle==='nightBg'){
+                    img = cloudy_night
+                }
                 break;
 
             case 'partly-cloudy-night':
@@ -101,6 +110,9 @@ const LeftResult = (props) => {
 
             case 'clear-day':
                 img = sunny
+                if(a.bgTitle==='nightBg'){
+                    img = clear_night
+                }
                 break;
 
             case 'clear-night':
@@ -108,12 +120,13 @@ const LeftResult = (props) => {
                 break;
 
             default:
-                img = sunny
+                img = rain
                 break;
         }
     }
 
     changeWeatherPic(dataArray.days[0].icon);
+    
 
 
     //Graph Attributes
@@ -152,7 +165,6 @@ const LeftResult = (props) => {
 
   return (
     <div className="left-result-box">
-
             <header>
                 <div className="header-info">
                     <img src={img} alt="" />
