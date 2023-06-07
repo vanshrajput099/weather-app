@@ -53,3 +53,9 @@
         max-width: 90%;
     }
 }
+
+@media only screen and (width<=360px) {
+    .next-day-card{
+        max-width: 100%;
+    }
+}

@@ -13,9 +13,51 @@
     backdrop-filter: blur(5px);
 }
 
+.error-box{
+    font-size: 4rem;
+    color: white;
+    font-weight:bolder;
+    width: 90%;
+    text-align: center;
+    background-color: black;
+    padding: 3rem;
+    color: red;
+}
+
+.small-error{
+    margin-top: 10px;
+    font-size: 1.5rem;
+    color: white;
+}
+
 @media only screen and (width<=1330px) {
     .result-box{
         flex-direction: column;
         align-items: center;
     }
 }
+
+@media only screen and (width<=800px) {
+    .result-box{
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+    }
+
+    .error-box{
+        width: 80%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 2.5rem;
+    }
+
+    .small-error{
+        font-size: 1rem;
+    }
+
+}
+
+
+

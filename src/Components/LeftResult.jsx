@@ -130,6 +130,7 @@ const LeftResult = (props) => {
     }
 
     const options = {
+        
         plugins: {
             legent:true
         },
