@@ -1,0 +1,37 @@
+import React from 'react'
+import "./RightResult.css"
+import NextDay from './NextDayCards/NextDay'
+
+const RightResult = (props) => {
+    const dataArray = props.dataArr;
+  return (
+    <div className="right-result-box">
+            <header className='right-result-header'>
+                <h1>Other Informations</h1>
+                <div className="infos">
+                    <div className="info-box">
+                        <h2>Humidity</h2>
+                        <p>{dataArray.days[0].humidity}</p>
+                    </div>
+                    <div className="info-box">
+                        <h2>Pressure</h2>
+                        <p>{dataArray.days[0].pressure}</p>
+                    </div>
+                    <div className="info-box">
+                        <h2>Visibility</h2>
+                        <p>{dataArray.days[0].visibility}</p>
+                    </div>
+                </div>
+            </header>
+
+            <div className="next-day-card-box">
+                <NextDay 
+                    data={dataArray.days[1]}  />
+                <NextDay 
+                    data={dataArray.days[2]} />
+            </div>
+        </div>
+  )
+}
+
+export default RightResult

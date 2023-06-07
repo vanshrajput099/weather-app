@@ -1,0 +1,55 @@
+.next-day-card{
+    max-width: 45%;
+    height: 95%;
+    border: 2px solid white;
+    border-radius: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.next-day-card header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-box-next-day{
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.next-day-card header h2{
+    text-align: center;
+}
+
+.next-day-info-span{
+    font-size: 1rem;
+}
+
+.next-day-info-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.next-day-main{
+    width: 100%;
+    margin-top: 15px;
+}
+
+.next-day-info-footer{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+@media only screen and (width<=660px) {
+    .next-day-card{
+        max-width: 90%;
+    }
+}

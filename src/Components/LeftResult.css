@@ -1,0 +1,98 @@
+.left-result-box{
+    width: 55%;
+    height: 100%;
+}
+
+.left-result-box header{
+    padding: 1rem 2rem;
+    height: 25%;
+}
+
+.header-info{
+    display: flex;
+    gap: 2rem;
+    height: 100%;
+    align-items: center;
+}
+
+.header-info img{
+    height: 100%;
+    animation: scaling 1s ease-in-out  infinite alternate ;
+}
+
+.day-info{
+    font-size: 3rem;
+}
+
+.date-info{
+    font-size: 2rem;
+}
+
+.left-result-box main{
+    width:50%;
+    text-align: left;
+    padding: 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.description-header{
+    margin-top: 5px;
+    font-size: 1.3rem;
+}
+
+.left-result-box main h1{
+    font-size: 3rem;
+}
+
+.graph-box{
+    padding: 1rem;
+    width:100%;
+    height: 50%;
+}
+
+.min-max{
+    font-size: 1rem;
+}
+
+.temp-info-span{
+    font-size: 1.5rem;
+}
+
+.left-result-box footer{
+    font-size: 1.5rem;
+    padding: 0rem 2rem;
+    text-align: center;
+}
+
+@keyframes scaling {
+    to{
+        transform: scale(1.2);
+    }
+}
+
+@media only screen and ((width<=1330px)) {
+    .left-result-box main{
+        width: 100%;
+    }
+    .graph-box{
+        display: flex;
+        justify-content: center;
+        height: 70%;
+    }
+}
+
+@media only screen and (width<=1086px) {
+    .left-result-box main{
+        width: 100%;
+    }
+}
+
+@media only screen and (width<=1024px) {
+    .header-info{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
