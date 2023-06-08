@@ -44,9 +44,11 @@ const LeftResult = (props) => {
     const arr = []
     const arr2 = []
     const dataArray = props.dataArr;
+
     let [img,changeimg] = useState(rain);
 
     let labelColor = "black";
+    
     if(a.bgTitle==='nightBg'){
         labelColor="white";
     }

@@ -6,16 +6,19 @@ import img1 from "../Assets/weather images/partly_cloudy.png"
 import img2 from "../Assets/weather images/cloudy_night.png"
 
 const SearchBox = () => {
+
     const dispath = useDispatch();
     const [country , changeCountry] = useState("")
     const [city , changeCity] = useState("")
-    const [fontsmall , changefontSmall] = useState("weather-app-title")
-    const [imgsmall , changeimgSmall] = useState("head-img-class")
-    const a = useSelector(state=>state.custom)
+    
+    let fontsmall = "weather-app-title"
+    let imgsmall = "head-img-class"
     let headimg = img1;
-
+    
+    const a = useSelector(state=>state.custom)
+    
     if(a.bgTitle==='nightBg'){
-        changefontSmall("weather-app-title-night")
+        fontsmall = "weather-app-title-night"
         headimg = img2;
     }
 
@@ -54,13 +57,13 @@ const SearchBox = () => {
                 payload:city
             })
 
-            changeimgSmall("head-img-class-small")
+            imgsmall = "head-img-class-small"
 
             if(a.bgTitle==='nightBg'){
-                changefontSmall("weather-app-title-small-night")
+                fontsmall = "weather-app-title-small-night"
             }
             else{
-                changefontSmall("weather-app-title-small")
+                fontsmall = "weather-app-title-small"
             }
         }}>Search</button>
     </div>

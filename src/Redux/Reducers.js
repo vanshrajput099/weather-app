@@ -8,12 +8,12 @@ let time = new Date();
 let bg=morningBg
 let bgtitle = ""
 
-if(time.getHours() > 5 && time.getHours()< 16){
+if(time.getHours() >= 5 && time.getHours() < 16){
     bg=morningBg
     bgtitle = "morningBg"
 }
 
-else if(time.getHours() >16 && time.getHours() < 20){
+else if(time.getHours() >= 16 && time.getHours() < 20){
     bg=noonBg
     bgtitle = "noonBg"
 }

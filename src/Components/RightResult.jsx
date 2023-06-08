@@ -7,14 +7,14 @@ const RightResult = (props) => {
     const dataArray = props.dataArr;
     const a = useSelector(state=>state.custom)
 
-    let class_name = "right-result-box"
+    let class_name = "right-result-header"
     if(a.bgTitle==='nightBg'){
         class_name="right-result-header-night"
     }
 
   return (
-    <div className={class_name}>
-            <header className='right-result-header'>
+    <div className="right-result-box">
+            <header className={class_name}>
                 <h1 className='other-info-head'>Other Informations</h1>
                 <div className="infos">
                     <div className="info-box">

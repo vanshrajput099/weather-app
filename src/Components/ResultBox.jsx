@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import "./ResultBox.css"
-import sunny from "../Assets/weather images/sunny.png"
 import LeftResult from './LeftResult'
 import RightResult from './RightResult'
 import axios from "axios"
@@ -15,15 +14,12 @@ const ResultBox = () => {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
 
-  let classname = "outer-body"
+  let classname = "result-box"
 
-  if(a.bgTitle==="morningBg"){
-    classname="outer-body"
+  if(a.bgTitle==="nightBg"){
+    classname="result-box"
   }
 
-  else{
-    classname="outer-body-night"
-  }
 
   //API CALL
   useEffect(() => {
@@ -64,7 +60,7 @@ const ResultBox = () => {
   }
 
   return (
-    <div className="result-box">
+    <div className={classname}>
        <LeftResult dataArr={data} />
         <RightResult dataArr={data} />
     </div>
