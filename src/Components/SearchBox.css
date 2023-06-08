@@ -50,45 +50,125 @@
 
 .weather-app-title{
     text-align: center;
+    color: black;
+    text-shadow: 1px 1px 2px white;
+    margin-bottom: 20px;
+    font-size: 5rem;
+}
+
+.weather-app-title-night{
+    text-align: center;
     color: white;
-    text-shadow: 2px 2px 5px black;
+    text-shadow: 1px 1px 2px black;
     margin-bottom: 20px;
     font-size: 5rem;
 }
 
 .weather-app-title-small{
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-align: left;
-    color: white;
-    text-shadow: 2px 2px 5px black;
+    color: black;
+    text-shadow: 1px 1px 2px white;
     margin-bottom: 5px;
 }
 
-.loading-box{
-    height: 50%;
-    width: 100%;
-    font-size: 10rem;
+.weather-app-title-small-night{
+    font-size: 2.5rem;
+    text-align: left;
     color: white;
+    text-shadow: 1px 1px 2px black;
+    margin-bottom: 5px;
+}
+
+.head-box{
     display: flex;
-    justify-content: center;
+    /* justify-content: space-around; */
+    align-items: flex-end;
+    padding: 1rem;
 }
 
-.search-icon{
-    height: 250px;
-    width: 250px;
-    animation: search-icon-animate 0.6s ease-in-out infinite alternate;
+.head-img-class{
+    width: 20%;
+    height: 20%;
+    animation: search-icon-animate 1.2s linear infinite alternate;
+    margin-left: 30px;
 }
 
-@keyframes search-icon-animate {
-    to{
-        transform: scale(1.3);
+.head-img-class-small{
+    width: 10%;
+    margin-left: 20px;
+    height: 10%;
+    animation: search-icon-animate 1.2s linear infinite alternate;
+}
+
+@media only screen and (width<=1600px) {
+    .head-box{
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+}
+
+@media only screen and (width<=1290px) {
+    .weather-app-title{
+        text-align: center;
+        color: black;
+        text-shadow: 1px 1px 2px white;
+        margin-bottom: 20px;
+        font-size: 3.5rem;
+    }
+    
+    .weather-app-title-night{
+        text-align: center;
+        color: white;
+        text-shadow: 1px 1px 2px black;
+        margin-bottom: 20px;
+        font-size: 3.5rem;
+    }
+}
+
+@media only screen and (width<=420px) {
+    .weather-app-title{
+        text-align: center;
+        color: black;
+        text-shadow: 1px 1px 2px white;
+        margin-bottom: 20px;
+        font-size: 2rem;
+    }
+    
+    .weather-app-title-night{
+        text-align: center;
+        color: white;
+        text-shadow: 1px 1px 2px black;
+        margin-bottom: 20px;
+        font-size: 2rem;
+    }
+
+    .head-img-class-small{
+        width: 25%;
+        margin-left: 20px;
+        height: 25%;
+        animation: none;
     }
 }
 
 
+@keyframes search-icon-animate {
+    to{
+        transform: scale(1.1);
+    }
+}
+
 @media only screen and (width<=1330px) {
     .search-box button{
         width: 40%;
+    }
+
+    .head-img-class-small{
+        width: 20%;
+        margin-left: 20px;
+        height: 20%;
+        animation: search-icon-animate 1.2s linear infinite alternate;
     }
 }
 
@@ -99,27 +179,20 @@
 
     .weather-app-title{
         width: 100%;
-        font-size: 3rem;
+        font-size: 2.5rem;
         text-align: center;
     }
 
     .weather-app-title-small{
-        font-size: 3rem;
+        font-size: 2.5rem;
         text-align: center;
-        color: white;
-        text-shadow: 2px 2px 5px black;
         margin-bottom: 15px;
     }
 
-    .loading-box{
-        width: 100%;
-        font-size: 3rem;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .search-icon{
-        width: 50px;
-        height: 50px;
+    .head-img-class-small{
+        width: 15%;
+        margin-left: 20px;
+        height: 15%;
+        animation: search-icon-animate 1.2s linear infinite alternate;
     }
 }

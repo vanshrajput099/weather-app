@@ -1,11 +1,19 @@
 import React from 'react'
 import "./RightResult.css"
 import NextDay from './NextDayCards/NextDay'
+import { useSelector } from 'react-redux'
 
 const RightResult = (props) => {
     const dataArray = props.dataArr;
+    const a = useSelector(state=>state.custom)
+
+    let class_name = "right-result-box"
+    if(a.bgTitle==='nightBg'){
+        class_name="right-result-header-night"
+    }
+
   return (
-    <div className="right-result-box">
+    <div className={class_name}>
             <header className='right-result-header'>
                 <h1 className='other-info-head'>Other Informations</h1>
                 <div className="infos">

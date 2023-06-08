@@ -46,6 +46,11 @@ const LeftResult = (props) => {
     const dataArray = props.dataArr;
     let [img,changeimg] = useState(rain);
 
+    let labelColor = "black";
+    if(a.bgTitle==='nightBg'){
+        labelColor="white";
+    }
+
     //Graph Data
     for(let i=0;i<dataArray.days[0].hours.length;i++){
         arr.push(dataArray.days[0].hours[i].datetime)
@@ -126,8 +131,6 @@ const LeftResult = (props) => {
     }
 
     changeWeatherPic(dataArray.days[0].icon);
-    
-
 
     //Graph Attributes
     const data = {
@@ -136,7 +139,7 @@ const LeftResult = (props) => {
             label: 'Temperature',
             data: arr2,
             backgroundColor:'white',
-            borderColor:'black',
+            borderColor:"black",
             fill:true,
             tension:0.2,
         }]
@@ -150,13 +153,13 @@ const LeftResult = (props) => {
         scales: {
             x: {
               ticks: {
-                color: 'white',
+                color: labelColor,
                 borderColor: 'black', // Change x-axis text color here
               },
             },
             y: {
               ticks: {
-                color: 'white',
+                color: labelColor,
                 borderColor: 'black', // Change y-axis text color here
               },
             },

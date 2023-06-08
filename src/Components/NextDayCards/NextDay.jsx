@@ -1,5 +1,6 @@
 import React from 'react'
 import "./NextDay.css"
+import { useSelector } from 'react-redux'
 import clear_night from "../../Assets/weather images/clear_night.png"
 import cloud_lightning from "../../Assets/weather images/cloud_lightning.png"
 import clouds from "../../Assets/weather images/clouds.png"
@@ -17,8 +18,10 @@ import stormy from "../../Assets/weather images/stormy.png"
 import sunny from "../../Assets/weather images/sunny.png"
 
 const NextDay = (props) => {
+
     const dataArray = props.data;
     let img = rain;
+    const a = useSelector(state=>state.custom)
 
     function changeWeatherPic(icon){
         switch(icon){
@@ -81,9 +84,14 @@ const NextDay = (props) => {
     }
 
     changeWeatherPic(dataArray.icon);
+    let class_name = "next-day-card";
+
+    if(a.bgTitle==='nightBg'){
+        class_name = "next-day-card-night";
+    }
 
   return (
-    <div className="next-day-card">
+    <div className={class_name}>
 
         <header>
             <img src={img} alt="" />

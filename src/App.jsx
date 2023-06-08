@@ -16,13 +16,12 @@ const App = () => {
   else{
     classname="outer-body-night"
   }
-
-  const {bgPic,search} = useSelector(state=>state.custom)
+  
   return (
-    <div style={{backgroundImage:`url(${bgPic})`}}  className={classname}>
+    <div style={{backgroundImage:`url(${a.bgPic})`}}  className={classname}>
         <SearchBox />
         {
-          search? <>
+          a.search? <>
                     <ResultBox />
                   </>:
           <>

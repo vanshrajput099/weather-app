@@ -15,6 +15,16 @@ const ResultBox = () => {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
 
+  let classname = "outer-body"
+
+  if(a.bgTitle==="morningBg"){
+    classname="outer-body"
+  }
+
+  else{
+    classname="outer-body-night"
+  }
+
   //API CALL
   useEffect(() => {
     fetchData(URL);
