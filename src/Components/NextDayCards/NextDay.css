@@ -84,7 +84,7 @@
     }
 
     .next-day-card-night{
-        max-width: 10%;
+        max-width: 100%;
         height: 95%;    
         border: 2px solid white;
         border-radius: 1rem;
