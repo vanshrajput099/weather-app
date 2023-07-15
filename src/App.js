@@ -1,23 +1,34 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Details from './Components/Details/Details';
+import WeatherStats from './Components/WeatherStats/WeatherStats';
+import { Routes , Route, BrowserRouter as Router } from 'react-router-dom';
+
+let time = new Date()
+let timeNow = time.getHours()
+
+let backgroundClass = "App ImageDay"
+
+if(timeNow >= 20){
+  backgroundClass = "App ImageNight"
+}
 
 function App() {
+  const [data, setData] = useState(null);
+  const [searching , changeSearching ] = useState(false)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={backgroundClass}>
+      { !searching ? 
+        <Details 
+          dataSet = {setData}
+          search = {changeSearching}
+         /> : 
+         <WeatherStats 
+          data={data} 
+          setData = {setData}   
+          setSearch = {changeSearching}
+         />
+      }
     </div>
   );
 }

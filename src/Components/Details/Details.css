@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Belanosima&display=swap');
+.details-box{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.details-header{
+    display:flex;
+    align-items: flex-end;
+}
+
+.details-heading{
+    font-size: 3.7rem;
+    color: white;
+    font-weight: bolder;
+    text-shadow: 1px 1px 1px black;
+    margin-bottom: 12px;
+    font-family: 'Belanosima', sans-serif;
+}
+
+.details-img{
+    margin-left: 10px;
+    transform: scale(0.8);
+    animation: sunAnimation 1s linear infinite alternate;
+}
+
+.details-form{
+    margin-top: 10px;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.details-input{
+    height: 3.5rem;
+    padding: 1rem;
+    font-size: 1.2rem;
+    border-radius: 2rem;
+    width: 50%;
+    border: none;
+}
+
+.details-select{
+    height: 3.5rem;
+    padding: 1rem;
+    font-size: 1.2rem;
+    border-radius: 2rem;
+    width: 40%;
+}
+
+.details-button{
+    width: 20%;
+    height: 2.5rem;
+    margin-top: 15px;
+    font-size: 1.1rem;
+    border: none;
+    text-align: center;
+    border-radius: 1rem;
+}
+
+.details-button:hover{
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+.details-box-after{
+    display: none;
+}
+
+@keyframes sunAnimation {
+    to{
+        transform: scale(1.1);
+    }
+}
+
+@keyframes sunAnimationAfter {
+    to{
+        transform: scale(0.7);
+    }
+}
+
+@media only screen and (width<=1024px) {
+    .details-box{
+        width: 70%;
+    }
+}
+
+@media only screen and (width<=768px) {
+    .details-box{
+        width: 80%;
+    }
+
+    .details-input{
+        font-size: 1rem;
+    }
+
+    .details-select{
+        padding: 0 1rem;
+        font-size: 1rem;
+    }
+
+    .details-button{
+        font-size: 1rem;
+        width: 30%;
+    }
+}
+
+@media only screen and (width<=425px) {
+
+    .details-header{
+        align-items: center;
+    }
+
+    .details-heading{
+        margin-top: 20px;
+        width: 80%;
+        font-size: 2.2rem;
+    }
+
+    .details-img{
+        width: 20%;
+        transform: scale(0.7);
+    }
+
+    .details-input{
+        font-size: 0.9rem;
+        height: 2.5rem;
+    }
+
+    .details-select{
+        padding: 0 1rem;
+        font-size: 0.9rem;
+        height: 2.5rem;
+        width: 45%;
+    }
+
+    .details-button{
+        font-size: 0.9rem;
+        width: 30%;
+    }
+}
+
+@media only screen and (width<=375px) {
+    .details-heading{
+        font-size: 1.9rem;
+    }
+
+    .details-input{
+        font-size: 0.8rem;
+        height: 2rem;
+    }
+
+    .details-select{
+        padding: 0 1rem;
+        font-size: 0.8rem;
+        height: 2rem;
+    }
+
+    .details-button{
+        font-size: 0.8rem;
+        width: 30%;
+        height: 2rem;
+    }
+}
+
+@media only screen and (width<=320px) {
+    .details-heading{
+        font-size: 1.6rem;
+    }
+
+    .details-input{
+        font-size: 0.6rem;
+        height: 2rem;
+    }
+
+    .details-select{
+        padding: 0 1rem;
+        font-size: 0.6rem;
+        height: 2rem;
+    }
+
+    .details-button{
+        font-size: 0.7rem;
+        width: 30%;
+        height: 2rem;
+    }
+}

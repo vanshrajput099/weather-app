@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Belanosima&display=swap');
+.weather-card{
+    border: 1px solid rgba(0, 0, 0, 0.355);
+    border-radius: 0.5rem;
+    width: 24%;
+    min-height: 200px;
+    padding: 1rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.6px);
+    -webkit-backdrop-filter: blur(8.6px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.weather-h1{
+    font-weight: lighter;
+    text-shadow: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: black;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.weather-h1-night{
+    font-weight: lighter;
+    text-shadow: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.weather-img{
+    margin-top: 10px;
+    height: 70px;
+    width: 70px;
+}
+
+.weather-h3{
+    font-weight: lighter;
+    text-shadow: none;
+    font-size: 1rem;
+    color: black;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.weather-h3-night{
+    color: white;
+    font-weight: lighter;
+    text-shadow: none;
+    font-size: 1rem;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.header-card-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+@media only screen and (width<=425px) {
+   .weather-card{
+        width: 45%;
+        min-height: 140px;
+   }
+
+
+   .weather-h1{
+    font-size: 1.1rem;
+   }
+
+   .weather-h1-night{
+    font-size: 1.1rem;
+   }
+
+   .weather-img{
+    height: 40px;
+    width: 40px;
+   }
+
+   .weather-h3{
+    font-size: 0.9rem;
+   }
+
+   .weather-h3-night{
+    font-size: 0.9rem;
+   }
+}
+
+
+@media only screen and (width<=375px) {
+    .weather-card{
+         width: 45%;
+         min-height: 140px;
+    }
+ 
+    .weather-h1{
+     font-size: 1rem;
+    }
+ 
+    .weather-h1-night{
+     font-size: 1rem;
+    }
+ 
+    .weather-img{
+     height: 40px;
+     width: 40px;
+    }
+ 
+    .weather-h3{
+     font-size: 0.8rem;
+    }
+ 
+    .weather-h3-night{
+     font-size: 0.8rem;
+    }
+ }
