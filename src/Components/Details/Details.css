@@ -145,18 +145,25 @@
 
 @media only screen and (width<=375px) {
     .details-heading{
-        font-size: 1.9rem;
+        font-size: 1.5rem;
+    }
+
+    .details-form{
+        flex-direction: column;
+        align-items: center;
     }
 
     .details-input{
-        font-size: 0.8rem;
-        height: 2rem;
+        font-size: 0.7rem;
+        height: 1.7rem;
+        width: 70%;
     }
 
     .details-select{
         padding: 0 1rem;
-        font-size: 0.8rem;
+        font-size: 0.7rem;
         height: 2rem;
+        width: 70%;
     }
 
     .details-button{
@@ -168,7 +175,7 @@
 
 @media only screen and (width<=320px) {
     .details-heading{
-        font-size: 1.6rem;
+        font-size: 1.3rem;
     }
 
     .details-input{
