@@ -111,41 +111,15 @@
 @media only screen and (width<=425px) {
 
     .details-header{
+        justify-content: center;
         align-items: center;
+        flex-direction: column;
     }
 
     .details-heading{
         margin-top: 20px;
-        width: 80%;
+        width: 100%;
         font-size: 2.2rem;
-    }
-
-    .details-img{
-        width: 20%;
-        transform: scale(0.7);
-    }
-
-    .details-input{
-        font-size: 0.9rem;
-        height: 2.5rem;
-    }
-
-    .details-select{
-        padding: 0 1rem;
-        font-size: 0.9rem;
-        height: 2.5rem;
-        width: 45%;
-    }
-
-    .details-button{
-        font-size: 0.9rem;
-        width: 30%;
-    }
-}
-
-@media only screen and (width<=375px) {
-    .details-heading{
-        font-size: 1.5rem;
     }
 
     .details-form{
@@ -154,16 +128,16 @@
     }
 
     .details-input{
-        font-size: 0.7rem;
+        font-size: 0.8rem;
         height: 1.7rem;
-        width: 70%;
+        width: 80%;
     }
 
     .details-select{
         padding: 0 1rem;
-        font-size: 0.7rem;
+        font-size: 0.8rem;
         height: 2rem;
-        width: 70%;
+        width: 80%;
     }
 
     .details-button{
@@ -171,26 +145,46 @@
         width: 30%;
         height: 2rem;
     }
+
+    .details-img{
+        width: 20%;
+        transform: scale(0.7);
+    }
+}
+
+@media only screen and (width<=375px) {
+    .details-heading{
+        font-size: 1.5rem;
+    }
 }
 
 @media only screen and (width<=320px) {
     .details-heading{
-        font-size: 1.3rem;
+        font-size: 2rem;
+        width: 100%;
+    }
+
+    .details-img{
+        width: 20%;
+    }
+
+    .details-form{
+        margin-top: 20px;
     }
 
     .details-input{
-        font-size: 0.6rem;
+        font-size: 0.8rem;
         height: 2rem;
     }
 
     .details-select{
         padding: 0 1rem;
-        font-size: 0.6rem;
+        font-size: 0.8rem;
         height: 2rem;
     }
 
     .details-button{
-        font-size: 0.7rem;
+        font-size: 0.8rem;
         width: 30%;
         height: 2rem;
     }
