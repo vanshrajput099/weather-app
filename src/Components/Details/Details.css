@@ -84,13 +84,23 @@
 
 @media only screen and (width<=1024px) {
     .details-box{
-        width: 70%;
+        width: 80%;
+    }
+
+    .details-heading{
+        text-align: center;
     }
 }
 
 @media only screen and (width<=768px) {
     .details-box{
         width: 80%;
+    }
+
+    .details-heading{
+        font-size: 3rem;
+        width: 100%;
+        text-align: center;
     }
 
     .details-input{
@@ -123,7 +133,7 @@
     .details-heading{
         margin-top: 20px;
         width: 100%;
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
 
     .details-form{
@@ -132,22 +142,22 @@
     }
 
     .details-input{
-        font-size: 0.8rem;
-        height: 1.7rem;
+        font-size: 0.9rem;
+        height: 2.5rem;
         width: 90%;
     }
 
     .details-select{
         padding: 0 1rem;
-        font-size: 0.8rem;
-        height: 2rem;
+        font-size: 0.9rem;
+        height: 2.5rem;
         width: 90%;
     }
 
     .details-button{
-        font-size: 0.8rem;
-        width: 30%;
-        height: 2rem;
+        font-size: 0.9rem;
+        width: 35%;
+        height: 2.5rem;
     }
 
     .details-img{
@@ -163,8 +173,13 @@
     }
 
     .details-heading{
+        text-align: center;
         width: 100%;
-        font-size: 2.5rem;
+        font-size: 3rem;
+    }
+
+    .details-img{
+        width: 20%;
     }
 
     .details-form{
